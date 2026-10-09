@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ShopEasy - Electronics Store</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="shopy.css">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="container nav">
+
+        <a href="#home" class="logo">
+            <span>Shop</span>Easy
+        </a>
+
+        <nav class="nav-links" id="navLinks">
+            <a href="#home">Home</a>
+            <a href="#products">Products</a>
+            <a href="#wishlist">Wishlist</a>
+            <a href="#cart">Cart</a>
+        </nav>
+
+        <div class="nav-actions">
+
+            <button class="icon-btn" id="themeBtn" title="Theme">🌙</button>
+
+            <a href="#wishlist" class="icon-btn badge-wrap">
+                ❤️
+                <span class="badge" id="wishlistCount">0</span>
+            </a>
+
+            <a href="#cart" class="icon-btn badge-wrap">
+                🛒
+                <span class="badge" id="cartCount">0</span>
+            </a>
+
+            <a href="#login" class="btn btn-small">Login</a>
+
+            <button class="menu-btn" id="menuBtn">☰</button>
+
+        </div>
+    </div>
+</header>
+
+
+<main id="app">
+
+    <!-- HOME -->
+    <section id="homePage" class="page">
+
+        <section class="hero">
+            <div class="container hero-content">
+
+                <div class="hero-text">
+                    <span class="hero-tag">🔥 Big Electronics Sale</span>
+
+                    <h1>
+                        Upgrade Your
+                        <span>Tech Life</span>
+                    </h1>
+
+                    <p>
+                        Discover the latest smartphones, laptops,
+                        headphones, smartwatches and more at amazing prices.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#products" class="btn">Shop Now</a>
+                        <a href="#products" class="btn btn-outline">
+                            Explore Products
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1468495244123-6c6c332eeece?auto=format&fit=crop&w=900&q=80"
+                        alt="Electronics">
+                </div>
+
+            </div>
+        </section>
+
+
+        <section class="section">
+            <div class="container">
+
+                <div class="section-heading">
+                    <div>
+                        <span class="section-label">Categories</span>
+                        <h2>Shop By Category</h2>
+                    </div>
+
+                    <a href="#products" class="view-link">View All →</a>
+                </div>
+
+                <div class="category-grid">
+
+                    <a href="#products" class="category-card" data-category="Mobiles">
+                        <div class="category-icon">📱</div>
+                        <h3>Mobiles</h3>
+                        <p>Latest smartphones</p>
+                    </a>
+
+                    <a href="#products" class="category-card" data-category="Laptops">
+                        <div class="category-icon">💻</div>
+                        <h3>Laptops</h3>
+                        <p>Powerful laptops</p>
+                    </a>
+
+                    <a href="#products" class="category-card" data-category="Audio">
+                        <div class="category-icon">🎧</div>
+                        <h3>Audio</h3>
+                        <p>Premium sound</p>
+                    </a>
+
+                    <a href="#products" class="category-card" data-category="Wearables">
+                        <div class="category-icon">⌚</div>
+                        <h3>Wearables</h3>
+                        <p>Smart watches</p>
+                    </a>
+
+                    <a href="#products" class="category-card" data-category="Accessories">
+                        <div class="category-icon">🔌</div>
+                        <h3>Accessories</h3>
+                        <p>Useful accessories</p>
+                    </a>
+
+                    <a href="#products" class="category-card" data-category="TV">
+                        <div class="category-icon">📺</div>
+                        <h3>TV</h3>
+                        <p>Smart televisions</p>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section class="section">
+            <div class="container">
+
+                <div class="section-heading">
+                    <div>
+                        <span class="section-label">Trending</span>
+                        <h2>Popular Products</h2>
+                    </div>
+
+                    <a href="#products" class="view-link">View All →</a>
+                </div>
+
+                <div class="product-grid" id="trendingProducts"></div>
+
+            </div>
+        </section>
+
+
+        <section class="section">
+            <div class="container">
+
+                <div class="offer-banner">
+
+                    <div class="offer-content">
+                        <span>LIMITED TIME OFFER</span>
+
+                        <h2>Get 10% OFF on your first order</h2>
+
+                        <p>
+                            Use coupon code
+                            <strong>WELCOME10</strong>
+                        </p>
+
+                        <a href="#products" class="btn">Shop Now</a>
+                    </div>
+
+                    <div class="offer-icon">🛍️</div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <section class="section newsletter-section">
+            <div class="container">
+
+                <div class="newsletter">
+
+                    <div>
+                        <span class="section-label">Newsletter</span>
+
+                        <h2>Get the latest offers</h2>
+
+                        <p>
+                            Subscribe to receive exclusive deals and updates.
+                        </p>
+                    </div>
+
+                    <form id="newsletterForm" class="newsletter-form">
+
+                        <input
+                            type="email"
+                            id="newsletterEmail"
+                            placeholder="Enter your email"
+                            required>
+
+                        <button type="submit" class="btn">
+                            Subscribe
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+        </section>
+
+    </section>
+
+
+    <!-- PRODUCTS -->
+    <section id="productsPage" class="page hidden">
+
+        <div class="container page-container">
+
+            <div class="page-title">
+                <span class="section-label">Shop</span>
+                <h1>All Products</h1>
+                <p>Find the perfect electronics for you.</p>
+            </div>
+
+            <div class="filters">
+
+                <div class="filter-group search-box">
+                    <label for="searchInput">Search</label>
+
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Search products...">
+                </div>
+
+                <div class="filter-group">
+                    <label for="categoryFilter">Category</label>
+
+                    <select id="categoryFilter">
+                        <option value="all">All Categories</option>
+                        <option value="Mobiles">Mobiles</option>
+                        <option value="Laptops">Laptops</option>
+                        <option value="Audio">Audio</option>
+                        <option value="Wearables">Wearables</option>
+                        <option value="Accessories">Accessories</option>
+                        <option value="TV">TV</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="priceFilter">Max Price</label>
+
+                    <input
+                        type="range"
+                        id="priceFilter"
+                        min="999"
+                        max="150000"
+                        value="150000">
+
+                    <span id="priceValue">₹1,50,000</span>
+                </div>
+
+                <div class="filter-group">
+                    <label for="sortFilter">Sort</label>
+
+                    <select id="sortFilter">
+                        <option value="default">Default</option>
+                        <option value="low">Price: Low to High</option>
+                        <option value="high">Price: High to Low</option>
+                        <option value="rating">Rating</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <div class="product-grid" id="productsGrid"></div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PRODUCT DETAILS -->
+    <section id="productPage" class="page hidden">
+
+        <div class="container page-container">
+            <div id="productDetails"></div>
+        </div>
+
+    </section>
+
+
+    <!-- CART -->
+    <section id="cartPage" class="page hidden">
+
+        <div class="container page-container">
+
+            <div class="page-title">
+                <span class="section-label">Shopping Cart</span>
+                <h1>Your Cart</h1>
+            </div>
+
+            <div id="cartContent"></div>
+
+        </div>
+
+    </section>
+
+
+    <!-- WISHLIST -->
+    <section id="wishlistPage" class="page hidden">
+
+        <div class="container page-container">
+
+            <div class="page-title">
+                <span class="section-label">Saved Items</span>
+                <h1>My Wishlist</h1>
+            </div>
+
+            <div class="product-grid wishlist-grid" id="wishlistGrid"></div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CHECKOUT -->
+    <section id="checkoutPage" class="page hidden">
+
+        <div class="container page-container">
+
+            <div class="page-title">
+                <span class="section-label">Checkout</span>
+                <h1>Complete Your Order</h1>
+            </div>
+
+            <form id="checkoutForm" class="checkout-grid">
+
+                <div class="checkout-form">
+
+                    <h2>Delivery Details</h2>
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+                            <label for="checkoutName">Full Name</label>
+
+                            <input
+                                type="text"
+                                id="checkoutName"
+                                required
+                                placeholder="Enter your name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="checkoutPhone">Phone</label>
+
+                            <input
+                                type="tel"
+                                id="checkoutPhone"
+                                required
+                                placeholder="Enter phone number">
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="checkoutEmail">Email</label>
+
+                        <input
+                            type="email"
+                            id="checkoutEmail"
+                            required
+                            placeholder="Enter email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="checkoutAddress">Address</label>
+
+                        <textarea
+                            id="checkoutAddress"
+                            rows="4"
+                            required
+                            placeholder="Enter complete address"></textarea>
+                    </div>
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+                            <label for="checkoutCity">City</label>
+
+                            <input
+                                type="text"
+                                id="checkoutCity"
+                                required
+                                placeholder="City">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="checkoutPincode">Pincode</label>
+
+                            <input
+                                type="text"
+                                id="checkoutPincode"
+                                required
+                                placeholder="Pincode">
+                        </div>
+
+                    </div>
+
+                    <h2 class="payment-heading">Payment Method</h2>
+
+                    <div class="payment-options">
+
+                        <label class="payment-option">
+                            <input
+                                type="radio"
+                                name="payment"
+                                value="cod"
+                                checked>
+                            <span>💵 Cash on Delivery</span>
+                        </label>
+
+                        <label class="payment-option">
+                            <input
+                                type="radio"
+                                name="payment"
+                                value="upi">
+                            <span>📱 UPI</span>
+                        </label>
+
+                        <label class="payment-option">
+                            <input
+                                type="radio"
+                                name="payment"
+                                value="card">
+                            <span>💳 Card</span>
+                        </label>
+
+                    </div>
+
+                    <button type="submit" class="btn checkout-btn">
+                        Place Order
+                    </button>
+
+                </div>
+
+                <div id="checkoutSummary"></div>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- LOGIN -->
+    <section id="loginPage" class="page hidden">
+
+        <div class="container auth-container">
+
+            <div class="auth-card">
+
+                <div class="auth-header">
+                    <span class="auth-icon">🔐</span>
+
+                    <h1>Welcome Back</h1>
+
+                    <p>Login to your ShopEasy account.</p>
+                </div>
+
+                <form id="loginForm">
+
+                    <div class="form-group">
+                        <label for="loginEmail">Email</label>
+
+                        <input
+                            type="email"
+                            id="loginEmail"
+                            required
+                            placeholder="Enter email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="loginPassword">Password</label>
+
+                        <input
+                            type="password"
+                            id="loginPassword"
+                            required
+                            placeholder="Enter password">
+                    </div>
+
+                    <button type="submit" class="btn auth-btn">
+                        Login
+                    </button>
+
+                </form>
+
+                <p class="auth-switch">
+                    Don't have an account?
+                    <a href="#register">Create Account</a>
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- REGISTER -->
+    <section id="registerPage" class="page hidden">
+
+        <div class="container auth-container">
+
+            <div class="auth-card">
+
+                <div class="auth-header">
+                    <span class="auth-icon">👤</span>
+
+                    <h1>Create Account</h1>
+
+                    <p>Join ShopEasy today.</p>
+                </div>
+
+                <form id="registerForm">
+
+                    <div class="form-group">
+                        <label for="registerName">Full Name</label>
+
+                        <input
+                            type="text"
+                            id="registerName"
+                            required
+                            placeholder="Enter your name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="registerEmail">Email</label>
+
+                        <input
+                            type="email"
+                            id="registerEmail"
+                            required
+                            placeholder="Enter email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="registerPassword">Password</label>
+
+                        <input
+                            type="password"
+                            id="registerPassword"
+                            required
+                            placeholder="Create password">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="registerConfirm">
+                            Confirm Password
+                        </label>
+
+                        <input
+                            type="password"
+                            id="registerConfirm"
+                            required
+                            placeholder="Confirm password">
+                    </div>
+
+                    <button type="submit" class="btn auth-btn">
+                        Create Account
+                    </button>
+
+                </form>
+
+                <p class="auth-switch">
+                    Already have an account?
+                    <a href="#login">Login</a>
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SUCCESS -->
+    <section id="successPage" class="page hidden">
+
+        <div class="container success-container">
+
+            <div class="success-card">
+
+                <div class="success-icon">✓</div>
+
+                <h1>Order Placed Successfully!</h1>
+
+                <p>Thank you for shopping with ShopEasy.</p>
+
+                <p id="orderNumber">
+                    Your order has been confirmed.
+                </p>
+
+                <a href="#products" class="btn">
+                    Continue Shopping
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<div
+    class="toast"
+    id="toast"
+    role="status"
+    aria-live="polite">
+</div>
+
+
+<footer class="footer">
+
+    <div class="container footer-grid">
+
+        <div class="footer-brand">
+
+            <a href="#home" class="logo">
+                <span>Shop</span>Easy
+            </a>
+
+            <p>
+                Your one-stop destination for modern electronics.
+            </p>
+
+        </div>
+
+        <div class="footer-column">
+            <h3>Shop</h3>
+
+            <a href="#products">All Products</a>
+            <a href="#products">Mobiles</a>
+            <a href="#products">Laptops</a>
+            <a href="#products">Audio</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Help</h3>
+
+            <a href="#login">Login</a>
+            <a href="#register">Register</a>
+            <a href="#cart">Cart</a>
+            <a href="#wishlist">Wishlist</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Contact</h3>
+
+            <p>📧 akbhardwaj9577@gmail.com</p>
+            <p>📞 +91 9507732410</p>
+            <p>📍 India</p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <div class="container">
+            <p>© 2026 ShopEasy. All Rights Reserved.</p>
+        </div>
+    </div>
+
+</footer>
+
+
+<!-- ONLY ONE JS FILE -->
+<script src="shopy.js"></script>
+
+</body>
+</html>
